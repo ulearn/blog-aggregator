@@ -1,0 +1,4 @@
+name = Slider block
+core = 7.x
+description = Render slider as block
+package =  Tabvn

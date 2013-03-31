@@ -1,0 +1,8 @@
+filename = "ULearnVideoLibrary-2012-11-20T00-21-19"
+description = ""
+datestamp = "1353345679"
+generator = "Backup and Migrate (http://drupal.org/project/backup_migrate)"
+generatorversion = "7.x-2.x"
+sites[0][version] = "7.17"
+sites[0][name] = "ULearn Video Library"
+sites[0][url] = "http://video.ulearn.ie/"

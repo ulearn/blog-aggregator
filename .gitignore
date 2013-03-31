@@ -1,0 +1,46 @@
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+sites/*/civicrm.settings.php
+sites/*/files/civicrm/templates_c/*
+
+# Ignore paths that contain user-generated content.
+sites/default/files/css
+sites/default/files/js
+robots.txt
+.htaccess
+
+#LetsHost Folders
+_private/
+_vti_bin/
+_vti_log/
+_vti_pvt/
+_vti_txt/
+bin/
+cache/
+cgi-bin/
+mail/
+languages/
+stats/
+sql/
+
+
+# Should we be ignoring 
+# PROJECT SPECIFIC --LETSHOST SERVER -- IGNORE sites/mysite AND sites/all 
+#sites/all/
+#sites/all/*
+#sites/all
+#sites/englishcourseireland.com/
+#sites/ulearn.ie/
+#sites/default/*
+#sites/default/
+#<<<<<<< HEAD
+#sites/default
+=======
+#snapshots/
+#>>>>>>> 9dda9f195f943923f52c0826496aa67930d39e5c
+
+# PROJECT SPECIFIC -- UBUNTU LOCAL -- IGNORE sites/mysite AND sites/all 
+#sites/all/
+#sites/mysite/
+#sites/prdctn.engcrsirl/
+#sites/prdctn.ulearn/

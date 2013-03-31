@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Implementation of hook_block_infp()
+ */
+function slider_block_block_info() {
+
+    $blocks['slider_block'] = array(
+        'info' => t('[slide_block] Slider block'),
+            // DRUPAL_CACHE_PER_ROLE will be assumed.
+    );
+
+    return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view()
+ */
+function slider_block_block_view($delta = '') {
+    // This example is adapted from node.module.
+    $block = array();
+
+    switch ($delta) {
+
+        case 'slider_block':
+            if (user_access('access content')) {
+                $block['subject'] = '';
+                if ($nodes = _slider_block_get_nodes()) {
+                    $block['content'] = array(
+                        '#theme' => 'slider_block',
+                        '#nodes' => $nodes,
+                    );
+                } else {
+                    $block['content'] = t('No content available.');
+                }
+            }
+            break;
+    }
+    return $block;
+}
+
+function _slider_block_get_nodes() {
+    $node_type = 'slider'; // this is name of slider type content.
+    $nodes = array();
+    $nids = db_query("SELECT n.nid FROM {node} n WHERE n.status = 1 AND n.type = :type ORDER BY n.created DESC", array(':type' => $node_type))->fetchCol();
+    if (!empty($nids)) {
+        $nodes = node_load_multiple($nids);
+    }
+    return $nodes;
+}
+
+/**
+ * Implemtnation of hook_theme()
+ */
+function slider_block_theme($existing, $type, $theme, $path) {
+    return array(
+        'slider_block' => array(
+            'variables' => array('nodes' => NULL),
+            'template' => 'slider_block',
+        ),
+    );
+}
