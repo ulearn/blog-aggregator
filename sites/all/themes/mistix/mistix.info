@@ -1,0 +1,38 @@
+name = Mistix
+description = Mistix theme, developed by <a href="http://tabvn.com/">Tabvn</a>.
+core = 7.x
+
+
+stylesheets[all][] = prettyPhoto.css
+
+scripts[[ = js/jquery-ui-1.8.20.custom.min.js
+scripts[] = js/jquery.prettyPhoto.js
+scripts[] = js/jquery.tools.min.js
+scripts[] = js/jquery.easing.1.3.js
+scripts[] = js/jcarousellite_1.0.1.min.js
+scripts[] = js/jquery.cycle.all.min.js
+scripts[] = js/superfish.js
+scripts[] = js/jquery.nivo.slider.pack.js
+scripts[] = js/jquery.anythingslider.js
+scripts[] = js/jquery.anythingslider.fx.js
+scripts[] = js/jquery.isotope.min.js
+scripts[] = js/jquery.ba-bbq.js
+scripts[] = js/contact.js
+scripts[] = js/jquery.li-scroller.1.0.js
+scripts[[ = js/js/gistfile_pmc.js
+scripts[] = js/custom.js
+scripts[] = js/mistix.js
+
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
+regions[help] = Help
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom
